@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Booking App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <h1>🎬 MovieBook</h1>
+    <p>Book your movie tickets</p>
+</header>
+
+<main>
+<section class="movie-section">
+    <h2>Select Movie</h2>
+    <select id="movie">
+        <option value="">-- Select Movie --</option>
+        <option value="Avengers">Avengers</option>
+        <option value="KGF">KGF</option>
+        <option value="Pushpa 2">Pushpa 2</option>
+        <option value="RRR">RRR</option>
+    </select>
+
+    <h2>Select Show Time</h2>
+    <div class="times">
+        <button onclick="selectTime(this)">10:00 AM</button>
+        <button onclick="selectTime(this)">1:00 PM</button>
+        <button onclick="selectTime(this)">4:00 PM</button>
+        <button onclick="selectTime(this)">7:00 PM</button>
+    </div>
+
+    <h2>Select Seats</h2>
+    <div id="seats" class="seats">
+        <button onclick="selectSeat(this)">A1</button>
+        <button onclick="selectSeat(this)">A2</button>
+        <button onclick="selectSeat(this)">A3</button>
+        <button onclick="selectSeat(this)">A4</button>
+        <button onclick="selectSeat(this)">B1</button>
+        <button onclick="selectSeat(this)">B2</button>
+        <button onclick="selectSeat(this)">B3</button>
+        <button onclick="selectSeat(this)">B4</button>
+        <button onclick="selectSeat(this)">C1</button>
+        <button onclick="selectSeat(this)">C2</button>
+        <button onclick="selectSeat(this)">C3</button>
+        <button onclick="selectSeat(this)">C4</button>
+    </div>
+
+    <p id="price">Total: ₹0</p>
+    <button class="book-btn" onclick="bookTicket()">Book Now</button>
+</section>
+</main>
+
+<div id="successWindow" class="popup">
+    <div class="popup-content">
+        <h2>🎉 Booking Successful!</h2>
+        <p id="bookingDetails"></p>
+        <button onclick="closeBookingWindow()">Close</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
